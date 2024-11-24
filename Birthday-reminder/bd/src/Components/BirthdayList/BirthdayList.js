@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { fetchBirthdays } from '../../api';
-import "../BirthdayList/birthdaylist.css"
+import "./birthdaylist.css"
 
 
 function BirthdayList() {
@@ -47,11 +47,11 @@ const [showToday,setShowToday]=useState(false)
         setShowToday(false); // Show all birthdays again
       };
   return (
-    <div>
+    <div className='container'>
     <h2> Birthdays</h2>
-    <div>
-        <button onClick={handleShowAllBirthdays}>show all birthdays</button>
-        <button onClick={handleShowTodayBirthdays}>show today's birthday</button>
+    <div classname="show">
+        <button   onClick={handleShowAllBirthdays} >show all birthdays</button>
+        <button  onClick={handleShowTodayBirthdays}>show today's birthday</button>
     </div>
     <ul>
         {filteredBirthdays.length > 0 ? (

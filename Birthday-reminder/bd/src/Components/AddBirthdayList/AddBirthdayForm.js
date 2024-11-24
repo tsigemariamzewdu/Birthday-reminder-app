@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {addBirthday} from "../../api"
+import "./addbirthdaylist.css"
 function AddBirthdayForm() {
   const [name,setName]=useState("");
   const [dateOfBirth,setDateOfBirth]=useState('')
@@ -17,7 +18,7 @@ try{
   }
   return (
     <form onSubmit={handleSubmit}>
-      <h2> Add Birthday</h2>
+      <h2 className='add'> Add Birthday</h2>
       <input type="text" 
       placeholder='Name'
       value={name}
@@ -29,7 +30,8 @@ try{
       value={dateOfBirth}
       onChange={(e)=>setDateOfBirth(e.target.value)} 
       required/>
-      <button type='sumbit'>Add</button>
+      <button  className="add-btn"
+      type='sumbit'>Add</button>
     </form>
    
   )
