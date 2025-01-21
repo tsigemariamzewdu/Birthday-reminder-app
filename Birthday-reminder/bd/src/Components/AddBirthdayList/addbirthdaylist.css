@@ -1,9 +1,9 @@
 form{
-    width: 80%;
+    width: 60%;
     position: absolute;
     top: 10%;
-    right: 10%;
-    background-color: black;
+    right: 20%;
+    background-color: rgb(184, 209, 231);
     height: 400px;
     border-radius: 20px;
 }
